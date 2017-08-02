@@ -1,0 +1,18 @@
+# container for an external mysql service
+
+sample-mysql:
+  image: mysql:latest
+  environment:
+    MYSQL_ROOT_PASSWORD: admin
+    MYSQL_DATABASE: java201
+    MYSQL_USER: admin
+    MYSQL_PASSWORD: admin
+  ports:
+    - 3306:3306
+
+# myapp-sample-webapp web application container:
+
+myapp-sample-webapp:
+  image: accenture-java201-automation
+  ports:
+    - 8080:8080
